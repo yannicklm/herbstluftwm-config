@@ -99,7 +99,7 @@ hc set window_gap 4
 
 hc set focus_follows_mouse 1
 hc set raise_on_click 1
-hc set raise_on_focus 1
+hc set raise_on_focus 0
 
 # rules
 hc unrule -F
