@@ -50,11 +50,12 @@ def id2name(win_id):
     out = process.communicate()[0]
     return out.split(b"=")[1].strip()
 
-names2tag=dict()
-
-for tag in list_all_tags():
-    ids = hc("dump", tag)
-    ids = re.findall(b"0x\w+", ids)
-    for id in ids:
-        name = id2name(id)
-        names2tag[name] = tag
+def names2tag():
+    res = dict()
+    for tag in list_all_tags():
+        ids = hc("dump", tag)
+        ids = re.findall(b"0x\w+", ids)
+        for id in ids:
+            name = id2name(id)
+            res[name] = tag
+    return res
