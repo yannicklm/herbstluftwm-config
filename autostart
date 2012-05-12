@@ -54,6 +54,8 @@ hc keybind $Mod-u split vertical 0.5
 hc keybind $Mod-o split horizontal 0.5
 hc keybind $Mod-s floating toggle
 hc keybind $Mod-f fullscreen toggle
+hc keybind $Mod-d set_layout grid
+hc keybind $Mod-m set_layout max
 
 # resizing
 RESIZESTEP=0.05
