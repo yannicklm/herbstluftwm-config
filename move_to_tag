@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source ~/.config/herbstluftwm/theme
+source ~/.config/herbstluftwm/tagutil.sh
+
+tag=$(list_all_tags | dmenu ${DMENU_OPTS[@]} -p "name: ")
+
+herbstclient add  $tag
+herbstclient move $tag
+herbstclient use  $tag

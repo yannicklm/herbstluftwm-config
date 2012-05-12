@@ -1,0 +1,14 @@
+#!/bin/bash
+
+HLWM_FONT="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+HLWM_NB_COLOR="#000000"
+HLWM_NF_COLOR="#ffffff"
+HLWM_SB_COLOR="#9fbc00"
+HLWM_SF_COLOR="#000000"
+
+DMENU_OPTS=(-b
+  -fn "$HLWM_FONT"
+  -nb "$HLWM_NB_COLOR"
+  -nf "$HLWM_NF_COLOR"
+  -sb "$HLWM_SB_COLOR"
+  -sf "$HLWM_SF_COLOR")
