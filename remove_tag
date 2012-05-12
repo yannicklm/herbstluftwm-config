@@ -2,6 +2,11 @@
 
 import utils
 
-tag = utils.run_dmenu(utils.list_empty_tags(), b"-p", b"name")
+def tag_weight(s):
+    return ['.', ':', '+', '!', '#'].index(chr(s[0]))
 
-utils.hc("merge_tag",  tag)
+tags = utils.hc("tag_status").split()
+tags.sort(key=tag_weight)
+
+tag =  utils.run_dmenu(tags, b"-p", b"rm")
+utils.hc("merge_tag",  tag[1:])
