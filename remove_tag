@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/python3
 
-source ~/.config/herbstluftwm/theme
-source ~/.config/herbstluftwm/tagutil.sh
+import utils
 
-tag=$(list_empty_tags | dmenu ${DMENU_OPTS[@]} -p "rm: ")
-herbstclient merge_tag $tag
+tag = utils.run_dmenu(utils.list_empty_tags(), b"-p", b"name")
+
+utils.hc("merge_tag",  tag)

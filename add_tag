@@ -1,9 +1,7 @@
-#!/bin/bash
+#!/usr/bin/python3
 
-source ~/.config/herbstluftwm/theme
-source ~/.config/herbstluftwm/tagutil.sh
+import utils
 
-tag=$(list_all_tags | dmenu ${DMENU_OPTS[@]} -p "name: ")
-
-herbstclient add $tag
-herbstclient use $tag
+tag = utils.run_dmenu(utils.list_all_tags(), b"-p", b"name")
+utils.hc("add",  tag)
+utils.hc("use",  tag)

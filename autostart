@@ -9,8 +9,6 @@ function hc() {
 hc emit_hook reload
 
 
-source ~/.config/herbstluftwm/theme
-
 feh --bg-scale ~/.wallpapers/nausicaa.jpeg
 
 # remove all existing keybindings
@@ -22,7 +20,7 @@ hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Return spawn gnome-terminal
-hc keybind $Mod-p spawn dmenu_run ${DMENU_OPTS[@]}
+hc keybind $Mod-p spawn ~/.config/herbstluftwm/dmenu_run
 
 # tags
 TAG_NAMES=( "main" "www"  "zik" )
