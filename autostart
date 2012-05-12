@@ -40,6 +40,7 @@ done
 hc keybind $Mod-t       spawn ~/.config/herbstluftwm/add_tag
 hc keybind $Mod-Shift-t spawn ~/.config/herbstluftwm/move_to_tag
 hc keybind $Mod-x       spawn ~/.config/herbstluftwm/remove_tag
+hc keybind $Mod-w       spawn ~/.config/herbstluftwm/win_list
 
 # cycle through tags
 hc keybind $Mod-n use_index +1
