@@ -12,7 +12,8 @@ hc emit_hook reload
 xsetroot -solid '#5A8E3A'
 xrandr --output HDMI-1 --auto
 xrandr --output DVI-I-1 --auto  --left-of HDMI-1
-feh --bg-scale ~/.wallpapers/nausicaa.jpeg
+feh --bg-scale ~/pics/gnome-look.jpg
+setxkbmap us intl
 
 # remove all existing keybindings
 hc keyunbind --all
