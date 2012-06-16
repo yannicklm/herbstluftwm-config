@@ -27,7 +27,7 @@ hc keybind $Mod-Return spawn gnome-terminal
 hc keybind $Mod-p spawn ~/.config/herbstluftwm/dmenu_run
 
 # tags
-TAG_NAMES=( "main" "www"  "zik" )
+TAG_NAMES=( "git" "main" "test" "www" "ssh")
 
 hc rename default "${TAG_NAMES[0]}" || true
 for i in ${!TAG_NAMES[@]} ; do
